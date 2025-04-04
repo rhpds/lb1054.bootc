@@ -1,0 +1,19 @@
+---
+namespace: lb1054
+name: bootc
+version: 1.0.0
+readme: README.md
+authors:
+- Mitesh The Mouse <mitsharm@redhat.com>
+description: This collection has multiple roles to setup bootc nodes
+license:
+- GPL-2.0-or-later
+license_file: ''
+tags: []
+dependencies: {}
+repository: https://github.com/rhpds/lb1054.bootc.git
+documentation: http://docs.example.com
+homepage: https://demo.redhat.com
+issues: http://example.com/issue/tracker
+build_ignore: []
+

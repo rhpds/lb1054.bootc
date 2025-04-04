@@ -1,2 +1,3 @@
-# lb1054.bootc
-For lab summit lb1054
+# Ansible Collection - lb1054.bootc
+
+Documentation for the collection.

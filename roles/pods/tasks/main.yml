@@ -1,0 +1,4 @@
+---
+
+- name: Include registry pod
+  include_tasks: registry.yml
