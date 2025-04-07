@@ -1,4 +1,11 @@
 ---
 
-- name: Include registry pod
-  include_tasks: registry.yml
+- name: Include host unsubscribe tasks
+  when: lb1054_bootc_rhn_repository_unsubscribe | bool
+  ansible.builtin.include_tasks:
+    file: unsubscribe.yml
+
+- name: Include host unsubscribe tasks
+  when: lb1054_bootc_rhn_repository_unsubscribe | bool
+  ansible.builtin.include_tasks:
+    file: unsubscribe.yml

@@ -1,0 +1,4 @@
+---
+
+lb1054_bootc_pod_username: "{{ student_name }}"
+lb1054_bootc_pod_auth_token: <CHANGEME>

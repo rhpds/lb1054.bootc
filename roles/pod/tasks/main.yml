@@ -1,0 +1,14 @@
+---
+- name: Create registry pod directory
+  ansible.builtin.file:
+    path: "/home/{{ lb1054_bootc_pod_username }}/.config/containers/"
+    state: directory
+    recurse: true
+    owner: "{{ lb1054_bootc_pod_username }}"
+
+- name: Create Podman Auth file
+  ansible.builtin.template:
+    src: auth.json.j2
+    dest: "/home/{{ lb1054_bootc_pod_username }}/.config/containers/auth.json"
+    state: present
+    owner: "{{ lb1054_bootc_pod_username }}"

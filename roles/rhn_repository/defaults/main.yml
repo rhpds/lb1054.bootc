@@ -1,0 +1,13 @@
+---
+# -----------------------------------------------------
+# Unsubscribe
+# -----------------------------------------------------
+lb1054_bootc_rhn_repository_unsubscribe: true
+
+# -----------------------------------------------------
+# Subscribe
+# -----------------------------------------------------
+lb1054_bootc_rhn_repository_subscribe: true
+# lb1054_bootc_rhn_repository_subscribe_activation_key: <CHANGEME>
+# lb1054_bootc_rhn_repository_subscribe_org_id: <CHANGEME>
+# lb1054_bootc_rhn_repository_subscribe_pool_ids: <CHANGEME>
