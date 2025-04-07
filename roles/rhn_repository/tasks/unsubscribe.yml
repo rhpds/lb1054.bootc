@@ -38,6 +38,7 @@
     label: "{{ file.path }}"
 
 - name: Restore rhsm.conf
+  when: 'cloud_provider == "ec2"'
   ansible.builtin.copy:
     src: /etc/rhsm/rhsm.conf.cloud_save
     dest: /etc/rhsm/rhsm.conf
