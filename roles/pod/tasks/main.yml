@@ -1,13 +1,33 @@
 ---
-- name: Create registry pod directory
+- name: Create registry pod directory in user
   ansible.builtin.file:
     path: "/home/{{ lb1054_bootc_pod_username }}/.config/containers/"
     state: directory
     recurse: true
     owner: "{{ lb1054_bootc_pod_username }}"
 
+- name: Create registry pod directory in root
+  ansible.builtin.file:
+    path: "/root/.config/containers/"
+    state: directory
+    recurse: true
+
 - name: Create Podman Auth file
   ansible.builtin.template:
     src: auth.json.j2
     dest: "/home/{{ lb1054_bootc_pod_username }}/.config/containers/auth.json"
     owner: "{{ lb1054_bootc_pod_username }}"
+
+- name: Create Podman Auth file
+  ansible.builtin.template:
+    src: auth.json.j2
+    dest: "/root/.config/containers/auth.json"
+
+- name: Get podman pull rhel-bootc:9.5 to the lab-user
+  become_user: "{{ student_user }}"
+  ansible.builtin.command:
+    cmd: podman pull registry.redhat.io/rhel9/rhel-bootc:9.5
+
+- name: Get podman pull bootc-image-builder:latest to the root
+  ansible.builtin.command:
+    cmd: podman pull registry.redhat.io/rhel9/bootc-image-builder:latest
