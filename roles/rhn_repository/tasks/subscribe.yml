@@ -6,5 +6,4 @@
     activationkey: "{{ lb1054_bootc_rhn_repository_subscribe_activation_key }}"
     org_id: "{{ lb1054_bootc_rhn_repository_subscribe_org_id }}"
     pool_ids: "{{ lb1054_bootc_rhn_repository_subscribe_pool_ids | default(omit) }}"
-    auto_attach: false
-
+    auto_attach: "{{ lb1054_bootc_rhn_repository_subscribe_auto_attach | bool }}"
