@@ -10,5 +10,4 @@
   ansible.builtin.template:
     src: auth.json.j2
     dest: "/home/{{ lb1054_bootc_pod_username }}/.config/containers/auth.json"
-    state: present
     owner: "{{ lb1054_bootc_pod_username }}"
