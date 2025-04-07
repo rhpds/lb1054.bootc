@@ -24,7 +24,7 @@
     dest: "/root/.config/containers/auth.json"
 
 - name: Get podman pull rhel-bootc:9.5 to the lab-user
-  become_user: "{{ student_user }}"
+  become_user: "{{ lb1054_bootc_pod_username }}"
   ansible.builtin.command:
     cmd: podman pull registry.redhat.io/rhel9/rhel-bootc:9.5
 
