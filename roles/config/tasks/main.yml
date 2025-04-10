@@ -10,6 +10,7 @@
     dest: /home/lab-user/wordpress-quadlet/
     owner: lab-user
     group: lab-user
+    remote_src: yes
 
 - name: Recursively remove repo directory
   ansible.builtin.file:
