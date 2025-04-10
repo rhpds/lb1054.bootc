@@ -9,7 +9,7 @@
     src: "{{ lb1054_bootc_config_example_repo_dest_path }}/examples/wordpress-quadlet/"
     dest: /home/lab-user/wordpress-quadlet/
     owner: lab-user
-    group: users
+    group: lab-user
     mode: 0644
 
 - name: Recursively remove repo directory
